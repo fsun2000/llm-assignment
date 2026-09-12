@@ -1,0 +1,32 @@
+{"id":"final-001","input":"My recovery codes are gone and the authenticator was on my old device.","label":"account_access"}
+{"id":"final-002","input":"The invite works, but authentication rejects every valid code.","label":"account_access"}
+{"id":"final-003","input":"I am stuck outside the account because reset emails are not delivered.","label":"account_access"}
+{"id":"final-004","input":"Signing in through Google sends me straight back to sign-in.","label":"account_access"}
+{"id":"final-005","input":"Please ensure I am not charged for another term; we are done using it.","label":"cancel_subscription"}
+{"id":"final-006","input":"I do not want a lower tier—I want to discontinue the service.","label":"cancel_subscription"}
+{"id":"final-007","input":"End our membership when the prepaid year finishes.","label":"cancel_subscription"}
+{"id":"final-008","input":"Switch off renewal; the team is moving to another product.","label":"cancel_subscription"}
+{"id":"final-009","input":"My banking app lists the exact same CloudDesk payment two times.","label":"duplicate_charge"}
+{"id":"final-010","input":"I approved a single transaction, not both of these identical debits.","label":"duplicate_charge"}
+{"id":"final-011","input":"The upgrade was charged once on Visa and then again on the same Visa.","label":"duplicate_charge"}
+{"id":"final-012","input":"There should be one renewal fee, but the statement has a pair.","label":"duplicate_charge"}
+{"id":"final-013","input":"I reported the double payment and was promised money back. Where is it?","label":"refund_status"}
+{"id":"final-014","input":"Has the credit from my cancelled yearly plan left your account yet?","label":"refund_status"}
+{"id":"final-015","input":"It has been nine business days since you approved the reimbursement.","label":"refund_status"}
+{"id":"final-016","input":"Can you trace the return payment referenced in your last email?","label":"refund_status"}
+{"id":"final-017","input":"Rather than quit, we want to drop from Enterprise to Pro.","label":"plan_change"}
+{"id":"final-018","input":"Can our subscription keep running with four fewer licenses?","label":"plan_change"}
+{"id":"final-019","input":"Change the current annual billing arrangement to month-to-month.","label":"plan_change"}
+{"id":"final-020","input":"What is the process for moving up to the next package?","label":"plan_change"}
+{"id":"final-021","input":"Send documentation of the March charge for our audit.","label":"invoice_request"}
+{"id":"final-022","input":"The receipt needs our VAT ID before finance will accept it.","label":"invoice_request"}
+{"id":"final-023","input":"May I have an itemized bill for the additional licenses?","label":"invoice_request"}
+{"id":"final-024","input":"I need the payment document, not a refund of the payment.","label":"invoice_request"}
+{"id":"final-025","input":"The kanban board used to load, but today it stays completely white.","label":"technical_bug"}
+{"id":"final-026","input":"Your existing Slack connection posts every notification three times.","label":"technical_bug"}
+{"id":"final-027","input":"Bulk edit is available, but applying it changes the wrong records.","label":"technical_bug"}
+{"id":"final-028","input":"The mobile app closes whenever I attach a photo.","label":"technical_bug"}
+{"id":"final-029","input":"It would help if a task could have more than one owner.","label":"feature_request"}
+{"id":"final-030","input":"Could you add biometric approval for sensitive actions?","label":"feature_request"}
+{"id":"final-031","input":"We would like dashboards that can be shared through a public link.","label":"feature_request"}
+{"id":"final-032","input":"Please build a native integration with our payroll system.","label":"feature_request"}

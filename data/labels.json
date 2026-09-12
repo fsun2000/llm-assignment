@@ -1,0 +1,10 @@
+{
+  "account_access": "Cannot sign in, reset a password, or complete authentication.",
+  "cancel_subscription": "Wants to end a paid subscription or prevent renewal.",
+  "duplicate_charge": "The same purchase appears to have been charged more than once.",
+  "refund_status": "Asks about the timing, progress, or absence of an expected refund.",
+  "plan_change": "Wants to upgrade, downgrade, or change billing cycle or seats.",
+  "invoice_request": "Needs an invoice, receipt, tax detail, or billing document.",
+  "technical_bug": "An existing product capability is broken or behaves incorrectly.",
+  "feature_request": "Proposes or asks for a product capability that does not exist."
+}

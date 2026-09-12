@@ -1,0 +1,32 @@
+{"id":"dev-001","input":"After resetting my password, the new one still will not let me in.","label":"account_access"}
+{"id":"dev-002","input":"The six-digit code goes to a phone number I no longer own.","label":"account_access"}
+{"id":"dev-003","input":"Our SSO login loops forever between CloudDesk and our identity provider.","label":"account_access"}
+{"id":"dev-004","input":"I cannot access the workspace because the verification message never arrives.","label":"account_access"}
+{"id":"dev-005","input":"Do not downgrade us; I want the subscription to end completely.","label":"cancel_subscription"}
+{"id":"dev-006","input":"Please prevent the next renewal and close the paid plan.","label":"cancel_subscription"}
+{"id":"dev-007","input":"We are leaving the service, so remove our subscription after this cycle.","label":"cancel_subscription"}
+{"id":"dev-008","input":"I need to stop paying for CloudDesk, not switch packages.","label":"cancel_subscription"}
+{"id":"dev-009","input":"One checkout resulted in two entries on my card statement.","label":"duplicate_charge"}
+{"id":"dev-010","input":"Your system collected the annual fee twice today.","label":"duplicate_charge"}
+{"id":"dev-011","input":"I have two matching pending charges although I only renewed once.","label":"duplicate_charge"}
+{"id":"dev-012","input":"Why was our seat purchase debited two times?","label":"duplicate_charge"}
+{"id":"dev-013","input":"You agreed to return the second charge; has that refund been sent?","label":"refund_status"}
+{"id":"dev-014","input":"The email says my money was returned, but it is missing from my bank.","label":"refund_status"}
+{"id":"dev-015","input":"What is the expected arrival date for refund R-901?","label":"refund_status"}
+{"id":"dev-016","input":"I cancelled already and am checking when the credit will appear.","label":"refund_status"}
+{"id":"dev-017","input":"Keep my account active but move it to the least expensive paid tier.","label":"plan_change"}
+{"id":"dev-018","input":"We want to replace monthly Pro with annual Pro.","label":"plan_change"}
+{"id":"dev-019","input":"Can you upgrade ten of our viewer seats to editor seats?","label":"plan_change"}
+{"id":"dev-020","input":"I need fewer seats next quarter, though we are not cancelling.","label":"plan_change"}
+{"id":"dev-021","input":"Accounting needs a receipt showing the tax paid on order 448.","label":"invoice_request"}
+{"id":"dev-022","input":"Please regenerate June's invoice with our new billing address.","label":"invoice_request"}
+{"id":"dev-023","input":"Where is the PDF billing document for the yearly renewal?","label":"invoice_request"}
+{"id":"dev-024","input":"Could I get formal proof that this card payment succeeded?","label":"invoice_request"}
+{"id":"dev-025","input":"The feature for duplicating a board now copies only its title.","label":"technical_bug"}
+{"id":"dev-026","input":"I can open attachments, but the download control suddenly does nothing.","label":"technical_bug"}
+{"id":"dev-027","input":"Comments are meant to support mentions, yet typing @ shows nobody.","label":"technical_bug"}
+{"id":"dev-028","input":"Since the update, recurring tasks are created on the wrong date.","label":"technical_bug"}
+{"id":"dev-029","input":"Could you create a way to merge two workspaces?","label":"feature_request"}
+{"id":"dev-030","input":"I would love voice notes inside task comments.","label":"feature_request"}
+{"id":"dev-031","input":"Do you plan to add right-to-left language layouts?","label":"feature_request"}
+{"id":"dev-032","input":"Please add an option to require manager approval before deletion.","label":"feature_request"}

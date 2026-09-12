@@ -1,0 +1,64 @@
+{"id":"train-001","input":"The password reset link says it has expired every time I open it.","label":"account_access"}
+{"id":"train-002","input":"I changed phones and cannot get past the authentication code screen.","label":"account_access"}
+{"id":"train-003","input":"My correct password is being rejected and I am locked out.","label":"account_access"}
+{"id":"train-004","input":"No verification email arrives when I try to sign in.","label":"account_access"}
+{"id":"train-005","input":"How can I regain access after losing my backup codes?","label":"account_access"}
+{"id":"train-006","input":"Single sign-on keeps returning me to the login page.","label":"account_access"}
+{"id":"train-007","input":"I forgot my password and need to enter my workspace today.","label":"account_access"}
+{"id":"train-008","input":"My account says too many login attempts even after waiting.","label":"account_access"}
+{"id":"train-009","input":"Please stop my paid membership before it renews next month.","label":"cancel_subscription"}
+{"id":"train-010","input":"I no longer use CloudDesk and want to close the subscription.","label":"cancel_subscription"}
+{"id":"train-011","input":"Turn off auto-renewal for our team plan.","label":"cancel_subscription"}
+{"id":"train-012","input":"Where do I cancel so I am not billed again?","label":"cancel_subscription"}
+{"id":"train-013","input":"We are shutting down the project; end the paid service.","label":"cancel_subscription"}
+{"id":"train-014","input":"I want to terminate my subscription, not pause it.","label":"cancel_subscription"}
+{"id":"train-015","input":"Cancel at the end of the current billing period.","label":"cancel_subscription"}
+{"id":"train-016","input":"Please make this my last month as a subscriber.","label":"cancel_subscription"}
+{"id":"train-017","input":"My statement shows two identical charges for the same renewal.","label":"duplicate_charge"}
+{"id":"train-018","input":"I clicked pay once but the card was debited twice.","label":"duplicate_charge"}
+{"id":"train-019","input":"There are duplicate CloudDesk transactions on my bank account.","label":"duplicate_charge"}
+{"id":"train-020","input":"Why did one monthly subscription create two charges?","label":"duplicate_charge"}
+{"id":"train-021","input":"We bought five seats but the same order appears twice.","label":"duplicate_charge"}
+{"id":"train-022","input":"I see a pending payment and a completed payment for an identical amount.","label":"duplicate_charge"}
+{"id":"train-023","input":"The invoice is single, yet my card has two matching debits.","label":"duplicate_charge"}
+{"id":"train-024","input":"I was billed again minutes after the first successful payment.","label":"duplicate_charge"}
+{"id":"train-025","input":"Support approved my refund last week; when will it reach my card?","label":"refund_status"}
+{"id":"train-026","input":"The cancellation email says refunded, but no money has arrived.","label":"refund_status"}
+{"id":"train-027","input":"Can you check the progress of refund case R-42?","label":"refund_status"}
+{"id":"train-028","input":"How many days do refunds usually take to appear?","label":"refund_status"}
+{"id":"train-029","input":"My dashboard marks the refund complete, but my balance has not changed.","label":"refund_status"}
+{"id":"train-030","input":"I am still waiting for the money you said you returned.","label":"refund_status"}
+{"id":"train-031","input":"Has the refund for my duplicate payment been processed yet?","label":"refund_status"}
+{"id":"train-032","input":"The credit was promised on Tuesday. What is its status?","label":"refund_status"}
+{"id":"train-033","input":"Move our workspace from Basic to Pro.","label":"plan_change"}
+{"id":"train-034","input":"Can I switch from annual billing to monthly billing?","label":"plan_change"}
+{"id":"train-035","input":"We need to reduce our plan from 20 seats to 8.","label":"plan_change"}
+{"id":"train-036","input":"Please downgrade us at the next renewal instead of cancelling.","label":"plan_change"}
+{"id":"train-037","input":"I want the tier that includes advanced exports.","label":"plan_change"}
+{"id":"train-038","input":"How do I add three paid seats to the current subscription?","label":"plan_change"}
+{"id":"train-039","input":"Change our monthly Starter plan to yearly Business.","label":"plan_change"}
+{"id":"train-040","input":"We need a cheaper tier but still want to remain customers.","label":"plan_change"}
+{"id":"train-041","input":"Please send a VAT invoice for our August payment.","label":"invoice_request"}
+{"id":"train-042","input":"Where can I download the receipt for last month's renewal?","label":"invoice_request"}
+{"id":"train-043","input":"Our finance team needs an invoice with the company address.","label":"invoice_request"}
+{"id":"train-044","input":"Could you add our tax number to the billing document?","label":"invoice_request"}
+{"id":"train-045","input":"I need proof of payment for expense reimbursement.","label":"invoice_request"}
+{"id":"train-046","input":"The billing portal does not show the April receipt.","label":"invoice_request"}
+{"id":"train-047","input":"Email me a copy of invoice CD-108.","label":"invoice_request"}
+{"id":"train-048","input":"Can the receipt be reissued in our legal company name?","label":"invoice_request"}
+{"id":"train-049","input":"The export button worked yesterday but now produces an empty file.","label":"technical_bug"}
+{"id":"train-050","input":"Notifications are enabled, yet no one receives them.","label":"technical_bug"}
+{"id":"train-051","input":"The dashboard freezes whenever I filter by owner.","label":"technical_bug"}
+{"id":"train-052","input":"Uploaded PDFs display as blank pages in the preview.","label":"technical_bug"}
+{"id":"train-053","input":"Tasks vanish after I drag them to another column.","label":"technical_bug"}
+{"id":"train-054","input":"The existing calendar sync stopped updating this morning.","label":"technical_bug"}
+{"id":"train-055","input":"Search returns no results for titles I can see on screen.","label":"technical_bug"}
+{"id":"train-056","input":"Saving a comment creates an endless loading spinner.","label":"technical_bug"}
+{"id":"train-057","input":"It would be useful to schedule a report for the first Monday each month.","label":"feature_request"}
+{"id":"train-058","input":"Please add a dark theme to the mobile app.","label":"feature_request"}
+{"id":"train-059","input":"Can you support exporting boards directly to PowerPoint?","label":"feature_request"}
+{"id":"train-060","input":"I wish guests could comment without creating an account.","label":"feature_request"}
+{"id":"train-061","input":"Could you introduce custom colors for priority labels?","label":"feature_request"}
+{"id":"train-062","input":"We need an integration with our inventory platform.","label":"feature_request"}
+{"id":"train-063","input":"Please let administrators set different retention periods by team.","label":"feature_request"}
+{"id":"train-064","input":"Is offline editing on your roadmap?","label":"feature_request"}

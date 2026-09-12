@@ -1,0 +1,30 @@
+{"id":"challenge-final-001","input":"I know our account is still paid, but I cannot pass the MFA screen after replacing my phone. I need access, not a subscription change.","label":"account_access"}
+{"id":"challenge-final-002","input":"The reset message arrives, then the link reports expired immediately. Nothing else needs changing until I can sign in.","label":"account_access"}
+{"id":"challenge-final-003","input":"SSO validates my company identity, but the CloudDesk login loop starts again before any workspace is shown.","label":"account_access"}
+{"id":"challenge-final-004","input":"My colleague and I both log in. I alone cannot enter the new workspace after accepting the invitation because it says I lack membership.","label":"workspace_access"}
+{"id":"challenge-final-005","input":"We retained all seats, but my billing-admin role was changed to member and the billing page is inaccessible after login.","label":"workspace_access"}
+{"id":"challenge-final-006","input":"An employee can authenticate but their invitation to our paid workspace expires with a message that all assigned seats are occupied.","label":"workspace_access"}
+{"id":"challenge-final-007","input":"Please ensure there is no charge after the current annual period. We are abandoning this product rather than moving to a different plan.","label":"cancel_subscription"}
+{"id":"challenge-final-008","input":"Our operations are winding down. Leave the current period alone, then terminate the paid subscription instead of downgrading it.","label":"cancel_subscription"}
+{"id":"challenge-final-009","input":"We are committed to CloudDesk but need to go from annual billing to monthly while retaining Pro and all current seats.","label":"plan_change"}
+{"id":"challenge-final-010","input":"The team is growing. Please add ten seats to the existing subscription; do not make a second purchase or close the account.","label":"plan_change"}
+{"id":"challenge-final-011","input":"A repeated annual charge is not a bank hold: both equal transactions settled on the same card for the same invoice yesterday.","label":"duplicate_charge"}
+{"id":"challenge-final-012","input":"CloudDesk billed our original card and its replacement for one renewal, and our bank marks both payments completed.","label":"duplicate_charge"}
+{"id":"challenge-final-013","input":"The agent already approved the refund for the extra renewal. It has been six working days with no credit—could you trace it?","label":"refund_status"}
+{"id":"challenge-final-014","input":"I received an email saying the refund was issued, but the credit is absent. Please tell me when that existing refund will settle.","label":"refund_status"}
+{"id":"challenge-final-015","input":"Our auditor needs last year's annual subscription invoice with the VAT registration. The payment was legitimate and only happened once.","label":"invoice_request"}
+{"id":"challenge-final-016","input":"The refund has arrived, but I still need the credit note as a document for finance.","label":"invoice_request"}
+{"id":"challenge-final-017","input":"The automatic payment did not complete because the debit account was closed. We need to replace the payment method and preserve the plan.","label":"payment_method"}
+{"id":"challenge-final-018","input":"There is one unfamiliar charge, no second settled transaction, and I want to see or update the card used for renewal.","label":"payment_method"}
+{"id":"challenge-final-019","input":"We have a temporary authorization plus a single settled renewal. The temporary item is still visible after three days; is there a payment problem?","label":"payment_method"}
+{"id":"challenge-final-020","input":"The in-product invoice download is a documented feature. It now returns a corrupt PDF for every past invoice, though the invoices exist.","label":"technical_bug"}
+{"id":"challenge-final-021","input":"Our existing automation should post task updates to Slack, but it reports delivered while producing no message in the channel.","label":"technical_bug"}
+{"id":"challenge-final-022","input":"The audit log page is included in our current plan and worked before; it now loads forever only after a date filter is chosen.","label":"technical_bug"}
+{"id":"challenge-final-023","input":"Could you add an option for audit logs to stream to our SIEM? Viewing them in the application works, but the product has no stream/export integration.","label":"feature_request"}
+{"id":"challenge-final-024","input":"We need subscription pauses for seasonal workers. Existing cancellation is not sufficient because we want service to resume without recreating it.","label":"feature_request"}
+{"id":"challenge-final-025","input":"Please add project-specific role mapping through SSO; current workspace-level mapping behaves correctly but is too limited.","label":"feature_request"}
+{"id":"challenge-final-026","input":"The account is accessible and payment is fine. We want to move from Pro to Enterprise at the next renewal to gain the higher limits.","label":"plan_change"}
+{"id":"challenge-final-027","input":"The client is leaving after the contract ends. They asked whether fewer seats would help, but the decision is to prevent renewal altogether.","label":"cancel_subscription"}
+{"id":"challenge-final-028","input":"We need an invoice corrected with our new legal address. There is no dispute about the one card payment.","label":"invoice_request"}
+{"id":"challenge-final-029","input":"A customer has two completed charges for one subscription renewal and asks why both settled; one must be reversed.","label":"duplicate_charge"}
+{"id":"challenge-final-030","input":"The person is already signed in, and the excess-charge refund was confirmed as issued last week. Their bank still has no credit; please check its status.","label":"refund_status"}

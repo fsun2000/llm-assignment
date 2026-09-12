@@ -1,0 +1,60 @@
+{"id":"challenge-train-001","input":"I pass the password screen, but the one-time code is sent to the phone our former admin wiped. I need to sign in before changing anything else.","label":"account_access"}
+{"id":"challenge-train-002","input":"Please do not cancel our plan. The recovery link says invalid after I enter the new password, so I cannot authenticate.","label":"account_access"}
+{"id":"challenge-train-003","input":"The invitation was accepted last week; today my authenticator rejects every code. Can you restore my login?","label":"account_access"}
+{"id":"challenge-train-004","input":"Billing is fine. Google sign-in completes and immediately returns to your login page; I am locked out of my own account.","label":"account_access"}
+{"id":"challenge-train-005","input":"Our owner changed her number. She remembers the password, but MFA has no backup route and she cannot prove the second factor.","label":"account_access"}
+{"id":"challenge-train-006","input":"I can see the renewal receipt in email, but password reset emails never arrive, including in spam. The urgent issue is getting into the account.","label":"account_access"}
+{"id":"challenge-train-007","input":"I can authenticate normally, yet the Acme workspace is missing from the workspace switcher after our owner invited me again.","label":"workspace_access"}
+{"id":"challenge-train-008","input":"My login works on both devices. The project opens with 'permission required' even though I was added as an editor yesterday.","label":"workspace_access"}
+{"id":"challenge-train-009","input":"Do not reset my password—I am already signed in. Please give my teammate the seat that was freed when Sam left; their invite says no seats available.","label":"workspace_access"}
+{"id":"challenge-train-010","input":"The SSO identity is accepted, but CloudDesk says I am not a member of Northstar. Who can restore that workspace membership?","label":"workspace_access"}
+{"id":"challenge-train-011","input":"I received a valid invitation and can sign in, but only the dashboard is visible; the shared folder is hidden because my role became viewer.","label":"workspace_access"}
+{"id":"challenge-train-012","input":"We upgraded seats yesterday. Authentication succeeds, but the new hire still gets 'workspace access denied' when joining the team.","label":"workspace_access"}
+{"id":"challenge-train-013","input":"We might downgrade later, but for now please make sure the whole subscription stops at the end of this paid term. We are leaving CloudDesk.","label":"cancel_subscription"}
+{"id":"challenge-train-014","input":"I need the service to end, not a cheaper tier. Turn off the next renewal after the current invoice period.","label":"cancel_subscription"}
+{"id":"challenge-train-015","input":"The card is still valid. Our contract ends in June and we do not want any new term created after that date.","label":"cancel_subscription"}
+{"id":"challenge-train-016","input":"Please close our paid account at renewal. Keep the invoice history available if possible, but do not keep us subscribed.","label":"cancel_subscription"}
+{"id":"challenge-train-017","input":"We reduced staff, but we are not asking to remove seats—we are discontinuing the product entirely before another annual charge happens.","label":"cancel_subscription"}
+{"id":"challenge-train-018","input":"A refund is not the request. The request is to prevent future billing because we have moved to another tool.","label":"cancel_subscription"}
+{"id":"challenge-train-019","input":"We are staying, but switch the annual agreement to monthly when it renews. Do not terminate the workspace.","label":"plan_change"}
+{"id":"challenge-train-020","input":"Keep our account active and move us from Enterprise to Pro; the renewal date itself can stay the same.","label":"plan_change"}
+{"id":"challenge-train-021","input":"Two people left. We need fewer licensed seats next cycle, not cancellation and not a refund.","label":"plan_change"}
+{"id":"challenge-train-022","input":"Can I add five seats to the existing subscription without creating a second workspace? We intend to continue using it.","label":"plan_change"}
+{"id":"challenge-train-023","input":"We want to retain service but change from monthly invoices to an annual payment. Which plan change handles that?","label":"plan_change"}
+{"id":"challenge-train-024","input":"The team outgrew the current limits. Please move the current subscription to the tier with audit logs; do not close it.","label":"plan_change"}
+{"id":"challenge-train-025","input":"Our statement shows two settled CloudDesk renewals with the same invoice number and amount. One is not merely pending—both have posted.","label":"duplicate_charge"}
+{"id":"challenge-train-026","input":"I see an authorization from yesterday and a completed debit today for one order. The bank confirms they are two captured charges, so please investigate the duplicate.","label":"duplicate_charge"}
+{"id":"challenge-train-027","input":"We changed cards last month. This morning the old and new cards were each charged for the same annual renewal, and both transactions cleared.","label":"duplicate_charge"}
+{"id":"challenge-train-028","input":"There are two completed $49 charges from CloudDesk, seconds apart, for the single seat upgrade we made once.","label":"duplicate_charge"}
+{"id":"challenge-train-029","input":"The invoice has not arrived, but more urgently I was charged twice for that one invoice. Both entries are marked completed in my bank app.","label":"duplicate_charge"}
+{"id":"challenge-train-030","input":"Please do not call this a pending hold: two separate debits have already settled for the same renewal reference.","label":"duplicate_charge"}
+{"id":"challenge-train-031","input":"Support approved a refund on Monday and said it was sent. It is Friday and nothing has reached the card; can you check its progress?","label":"refund_status"}
+{"id":"challenge-train-032","input":"The duplicate was already resolved and a credit note was issued. I only need to know when the promised refund will appear.","label":"refund_status"}
+{"id":"challenge-train-033","input":"I have the refund confirmation email, but my bank balance has not changed after eight business days. Is the payment still processing?","label":"refund_status"}
+{"id":"challenge-train-034","input":"No new charge occurred. I am following up on the refund your agent authorized after our cancellation last week.","label":"refund_status"}
+{"id":"challenge-train-035","input":"The receipt is available, but the refunded amount shows as issued by CloudDesk and is absent from my statement. Please trace the refund.","label":"refund_status"}
+{"id":"challenge-train-036","input":"I am not requesting a refund decision. It was approved already; I need its expected arrival date.","label":"refund_status"}
+{"id":"challenge-train-037","input":"Finance needs the invoice for our March renewal with the legal entity name and VAT number. The charge itself is correct.","label":"invoice_request"}
+{"id":"challenge-train-038","input":"Can you send a receipt that separates tax from the subscription amount? We need it for expense reconciliation, not a refund.","label":"invoice_request"}
+{"id":"challenge-train-039","input":"The payment posted once, but the downloadable invoice has our old company address. Please issue the corrected document.","label":"invoice_request"}
+{"id":"challenge-train-040","input":"Our auditor needs a credit note for the refunded renewal. I am asking for the document, not for an update on the refund transfer.","label":"invoice_request"}
+{"id":"challenge-train-041","input":"Where can I retrieve an itemized billing receipt for the two added seats? The seat count is otherwise fine.","label":"invoice_request"}
+{"id":"challenge-train-042","input":"Please provide the invoice reference and tax fields for last quarter; our card was charged correctly.","label":"invoice_request"}
+{"id":"challenge-train-043","input":"Our renewal failed because the corporate card expired. We are not disputing a charge; where do I replace the card on file?","label":"payment_method"}
+{"id":"challenge-train-044","input":"The bank declined the upgrade payment. I want to use a different card, while keeping the same plan request.","label":"payment_method"}
+{"id":"challenge-train-045","input":"A single charge is unfamiliar, and I need to know which payment method CloudDesk used before I contact the bank. It has not duplicated.","label":"payment_method"}
+{"id":"challenge-train-046","input":"Please update the billing card before the next renewal. The current subscription and seat count should remain unchanged.","label":"payment_method"}
+{"id":"challenge-train-047","input":"Our bank debit was rejected for insufficient funds. Can we retry it on a credit card rather than cancel the service?","label":"payment_method"}
+{"id":"challenge-train-048","input":"The invoice looks correct, but checkout rejects every valid company card. How can we complete the payment?","label":"payment_method"}
+{"id":"challenge-train-049","input":"The export button is part of our plan and worked last week. It now produces a zero-byte CSV even though the table has rows.","label":"technical_bug"}
+{"id":"challenge-train-050","input":"We do not need a new reporting feature. The existing scheduled report is delivered, but every attachment is blank.","label":"technical_bug"}
+{"id":"challenge-train-051","input":"The audit log capability is documented for our tier. Opening it spins forever in every browser after a successful login.","label":"technical_bug"}
+{"id":"challenge-train-052","input":"I can access the project, but assigning a task to an existing member silently removes the due date. This used to work.","label":"technical_bug"}
+{"id":"challenge-train-053","input":"Please fix, rather than add, the Slack integration: it is connected and shows successful delivery while posting no notifications.","label":"technical_bug"}
+{"id":"challenge-train-054","input":"We upgraded for SSO, but the already-supported SSO mapping now ignores our configured groups. Is that service broken?","label":"technical_bug"}
+{"id":"challenge-train-055","input":"Could CloudDesk alert different teams based on a task field? The current notifications only go to one fixed channel, so we need that new routing ability.","label":"feature_request"}
+{"id":"challenge-train-056","input":"Is there any way to export the audit log directly to our SIEM? I can view it in CloudDesk, but no native export or connector exists.","label":"feature_request"}
+{"id":"challenge-train-057","input":"We want SSO group mapping to assign project-level roles, not only workspace membership. Does the product offer that capability?","label":"feature_request"}
+{"id":"challenge-train-058","input":"Please add an option to pause a subscription for a month. Cancelling and re-creating it is not the workflow we need.","label":"feature_request"}
+{"id":"challenge-train-059","input":"The CSV export works, but finance needs columns for the original currency that the current export does not include. Can you add them?","label":"feature_request"}
+{"id":"challenge-train-060","input":"We are looking for a read-only external status page for each project. The existing dashboard is internal only; is a public view planned?","label":"feature_request"}

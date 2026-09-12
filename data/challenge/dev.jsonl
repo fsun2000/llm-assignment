@@ -1,0 +1,30 @@
+{"id":"challenge-dev-001","input":"The team owner can sign in, but I cannot: the authenticator app was on a destroyed phone and recovery codes were never saved. Please help me authenticate.","label":"account_access"}
+{"id":"challenge-dev-002","input":"We are changing plans later. First, login rejects the correct password after a reset and the account is temporarily locked.","label":"account_access"}
+{"id":"challenge-dev-003","input":"I can sign in through SSO, but finance found two completed, matching renewal debits against one invoice. Both have cleared, so please investigate the extra charge.","label":"duplicate_charge"}
+{"id":"challenge-dev-004","input":"I signed in with no problem, but after accepting the invite I get 'not authorized' for the Atlas workspace. Please fix my membership.","label":"workspace_access"}
+{"id":"challenge-dev-005","input":"The password is fine and the dashboard loads. My role no longer lets me open the client project I was assigned to yesterday.","label":"workspace_access"}
+{"id":"challenge-dev-006","input":"We bought another seat, and support approved a refund for the mistaken add-on yesterday. The employee can log in; when should that approved refund arrive?","label":"refund_status"}
+{"id":"challenge-dev-007","input":"Please end the subscription after this month. Reducing to the free tier is not what we mean; we no longer need the product.","label":"cancel_subscription"}
+{"id":"challenge-dev-008","input":"We have a valid payment card, but want no renewal after the prepaid annual period because the company is closing this workspace.","label":"cancel_subscription"}
+{"id":"challenge-dev-009","input":"Keep all users active, but lower the subscription from 50 to 25 seats at the next billing date.","label":"plan_change"}
+{"id":"challenge-dev-010","input":"Can you migrate our still-active monthly Pro subscription to annual Enterprise? We are expanding, not ending service.","label":"plan_change"}
+{"id":"challenge-dev-011","input":"The bank shows one CloudDesk entry as pending and another as completed for the same renewal. It says the pending item may fall off; has the completed payment gone through twice?","label":"payment_method"}
+{"id":"challenge-dev-012","input":"Two fully settled, identical payments appear against one renewal invoice. Both have distinct transaction IDs, so please reverse the duplicate charge.","label":"duplicate_charge"}
+{"id":"challenge-dev-013","input":"Our finance team needs a VAT invoice. A refund was approved too, but the immediate deliverable is the billing document.","label":"invoice_request"}
+{"id":"challenge-dev-014","input":"Support told us yesterday that the excess charge refund was processed. It still has not appeared in the bank account—what stage is it at?","label":"refund_status"}
+{"id":"challenge-dev-015","input":"The card was updated successfully, but the documented invoice-download page now produces an empty PDF for every invoice. Please fix that existing feature.","label":"technical_bug"}
+{"id":"challenge-dev-016","input":"The scheduled-export feature is included in our tier. It claims success but no file ever appears in the destination folder.","label":"technical_bug"}
+{"id":"challenge-dev-017","input":"Can scheduled exports also send files to SFTP? They currently work only for email, and we need a new delivery destination.","label":"feature_request"}
+{"id":"challenge-dev-018","input":"The receipt page downloads, but it omits the PO number finance needs. Please issue a billing document that includes it.","label":"invoice_request"}
+{"id":"challenge-dev-019","input":"No refund was promised. We are only seeing a single unfamiliar completed charge and want to change the card before renewal.","label":"payment_method"}
+{"id":"challenge-dev-020","input":"We are signed in and can see the workspace, but an admin's existing permission to edit billing settings has disappeared.","label":"workspace_access"}
+{"id":"challenge-dev-021","input":"We need to stop everything at the term boundary; moving down a tier first would just add work before we leave.","label":"cancel_subscription"}
+{"id":"challenge-dev-022","input":"There is one completed debit and one temporary authorization for our annual invoice. The invoice is fine; why did the payment verification fail to clear?","label":"payment_method"}
+{"id":"challenge-dev-023","input":"The refund confirmation says 'issued' three business days ago. I am not asking for another refund, only an ETA for the one already sent.","label":"refund_status"}
+{"id":"challenge-dev-024","input":"Task templates are supported, but selecting an existing template creates a blank task. Please repair that behavior.","label":"technical_bug"}
+{"id":"challenge-dev-025","input":"We need task templates to apply different defaults by client. The current template feature works but cannot make that distinction.","label":"feature_request"}
+{"id":"challenge-dev-026","input":"How do we alter the existing contract so invoice frequency becomes quarterly while keeping the same number of seats and workspace?","label":"plan_change"}
+{"id":"challenge-dev-027","input":"The account owner receives MFA codes but they are all rejected. A teammate can still access their project; the owner needs to log in.","label":"account_access"}
+{"id":"challenge-dev-028","input":"Both last Friday's renewal charge and a repeated charge today are marked posted, for the same invoice. Neither is a temporary hold.","label":"duplicate_charge"}
+{"id":"challenge-dev-029","input":"Can you provide the credit note associated with our already-refunded order? The money has arrived; accounting lacks the document.","label":"invoice_request"}
+{"id":"challenge-dev-030","input":"We want an API endpoint to provision project roles automatically. The current API can list roles but cannot assign them.","label":"feature_request"}

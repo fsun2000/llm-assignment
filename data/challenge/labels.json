@@ -1,0 +1,12 @@
+{
+  "account_access": "An individual cannot authenticate, sign in, reset credentials, complete MFA, or regain control of their identity.",
+  "workspace_access": "A signed-in person cannot enter a workspace, project, or resource because of membership, role, invitation, seat, or permission state.",
+  "cancel_subscription": "The customer wants the paid subscription to end entirely or its next renewal prevented. This wins over a possible plan change when they say they are leaving.",
+  "plan_change": "The customer wants to keep the subscription while changing tier, seats, cadence, or product edition.",
+  "duplicate_charge": "Two or more completed/captured charges exist for the same purchase. A pending authorization or a single unfamiliar charge is not enough.",
+  "refund_status": "A refund has already been promised, approved, or issued, and the customer asks about its timing, progress, or absence.",
+  "invoice_request": "The customer needs a receipt, invoice, credit note, tax/VAT field, or other billing document; use this even when the document will support an expense dispute.",
+  "payment_method": "A card, bank debit, or other payment instrument must be updated, has failed, or is being queried. This does not cover a confirmed duplicate charge.",
+  "technical_bug": "A documented, existing CloudDesk capability behaves incorrectly. A request for an unbuilt capability belongs to feature_request.",
+  "feature_request": "The customer asks for a new or expanded capability, including a workaround request when the current product lacks that capability."
+}

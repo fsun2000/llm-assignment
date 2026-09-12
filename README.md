@@ -4,7 +4,7 @@
 
 This self-study assignment is for Python learners who can read and write small scripts and who have made, or are ready to make, their first LLM API call. Modules 1–4 are Beginner level. Modules 5–8 are Intermediate extensions of the same project.
 
-Estimated time: 6–10 hours. Use one codebase and one dataset throughout.
+Estimated time: 6–10 hours. Use one codebase and one dataset track throughout.
 
 ## The learning loop
 
@@ -33,7 +33,30 @@ By the end, you should be able to:
 
 No model training, fine-tuning, agents, orchestration framework, database, or production deployment is required.
 
-## Scenario and dataset
+## Choose a dataset track
+
+RouteLab includes two independent synthetic datasets. Pick **one** before beginning an experiment series, and record the choice in the experiment log. Keep the standard track unchanged for an introductory assignment; use the challenge track when a simple label-only prompt is no longer revealing useful differences between systems.
+
+| Track | Location | Labels / split sizes | Best for |
+| --- | --- | --- | --- |
+| `standard` | `data/` | 8 labels; 64 train, 32 dev, 32 final | First LLM classification experiments |
+| `challenge` | `data/challenge/` | 10 labels; 60 train, 30 dev, 30 final | Ambiguous, multi-issue routing and stronger evaluation |
+
+The two tracks have separate splits and label files. Do not mix training examples, predictions, label definitions, or results across them. The challenge-track policy and its additional label boundaries live in [`data/challenge/README.md`](data/challenge/README.md).
+
+The supplied [`src/datasets.py`](src/datasets.py) helper exposes the selection in code:
+
+```python
+from datasets import dataset_path, labels_path
+
+DEV_PATH = dataset_path("challenge", "dev")  # or "standard"
+LABELS_PATH = labels_path("challenge")
+```
+
+When you implement the optional prediction CLI, expose the same choice as `--dataset standard` or `--dataset challenge`; defaulting to `standard` preserves the original beginner flow.
+The starter's label path also honors `ROUTELAB_DATASET`; in PowerShell, run `$env:ROUTELAB_DATASET = "challenge"` before executing your classifier.
+
+## Standard scenario and dataset
 
 You are routing incoming requests for **CloudDesk**, a fictional SaaS product. Given one support message, your program must return exactly one routing label.
 
@@ -50,14 +73,14 @@ The synthetic dataset uses eight labels. Several are deliberately easy to confus
 | `technical_bug` | an existing product capability is broken or behaves incorrectly | requesting a capability that does not exist (`feature_request`) |
 | `feature_request` | the user proposes or asks for a new product capability | reporting that an existing capability is broken (`technical_bug`) |
 
-Files:
+Standard-track files:
 
 - `data/train.jsonl`: 64 labeled examples. Use for understanding labels and selecting demonstrations.
 - `data/dev.jsonl`: 32 labeled examples. Reuse for Modules 1–7 so comparisons are fair.
 - `data/final.jsonl`: 32 labeled examples. Do not inspect or evaluate this split until Module 8.
 - `data/labels.json`: machine-readable label definitions.
 
-Every JSONL row has this shape:
+Every JSONL row in either track has this shape:
 
 ```json
 {"id":"dev-001","input":"I was billed twice for one renewal.","label":"duplicate_charge"}
@@ -81,7 +104,7 @@ def predict(text: str) -> str:
     """Return one valid routing label."""
 ```
 
-Use `src/azure_client.py` for the small amount of connection setup supplied with the assignment. Your prediction code should make independent calls through:
+Use `src/azure_client.py` for the small amount of connection setup supplied with the assignment. Resolve the selected track's `labels.json` instead of assuming the standard label set. Your prediction code should make independent calls through:
 
 ```python
 response = client.responses.create(
@@ -94,6 +117,14 @@ Read plain-text output from `response.output_text`. In Module 6, use `client.res
 
 The Azure endpoint value should look like `https://YOUR-RESOURCE-NAME.openai.azure.com`; the supplied helper appends `/openai/v1/`. If your organization requires Microsoft Entra ID instead of an API key, ask your instructor to adapt only the authentication helper—the experiments do not otherwise change.
 
+### Recommended model: GPT-5 nano
+
+Use an Azure OpenAI deployment of **GPT-5 nano** as the default model for this assignment. It is a good fit because it is designed for focused tasks such as intent classification, is inexpensive enough for repeated evaluation runs, and supports both the Responses API and structured outputs.
+
+When creating the Azure deployment, give it a recognizable name such as `routelab-gpt-5-nano`. Put that **deployment name** in `AZURE_OPENAI_DEPLOYMENT`; your Azure deployment name does not have to equal the underlying `gpt-5-nano` model ID.
+
+If GPT-5 nano is unavailable in your Azure region or subscription, use another small text-generation model that supports the Responses API and record the exact deployment and underlying model. Keep the same deployment throughout Modules 1–7 so measured differences come from your experiments rather than a model change.
+
 For reproducible comparisons, keep the evaluation rows and model settings fixed unless the experiment explicitly changes them. Use low or zero sampling temperature if your API supports it. Save raw outputs as well as parsed labels when practical.
 
 ## Ground rules for experiments
@@ -102,8 +133,8 @@ For reproducible comparisons, keep the evaluation rows and model settings fixed 
 - Evaluate on the same development examples in Modules 1–7.
 - Record every result, including negative results.
 - Do not silently convert an invalid response into a correct label.
-- Do not use `final.jsonl` for prompt writing, example selection, or debugging.
-- Cap your run before calling the API. A 32-row development pass means 32 model calls for a single-call classifier.
+- Do not use the selected track's `final.jsonl` for prompt writing, example selection, or debugging.
+- Cap your run before calling the API. A single-call development pass means one call per row (32 for standard; 30 for challenge).
 - Cache predictions so rerunning metric code does not spend more money.
 
 ---
@@ -118,7 +149,7 @@ Create the smallest working, single-call LLM classifier.
 
 ### Task
 
-Load `data/dev.jsonl`. For each message, call an LLM and ask it to choose one of the eight valid labels. Return only a label, validate it, and save one prediction per row. Calculate accuracy. Start with no demonstrations and no label definitions beyond the label names.
+Load the selected track's `dev.jsonl`. For each message, call an LLM and ask it to choose one of its valid labels. Return only a label, validate it, and save one prediction per row. Calculate accuracy. Start with no demonstrations and no label definitions beyond the label names.
 
 ### Required measurements
 
@@ -195,7 +226,7 @@ Test one prompt-level hypothesis against the baseline.
 
 ### Task
 
-Choose one Module 2 hypothesis. Modify only the prompt—for example, add concise label definitions or a decision rule for a confusing pair. Run the same model on the same 32 development examples. Do not add labeled demonstrations yet.
+Choose one Module 2 hypothesis. Modify only the prompt—for example, add concise label definitions or a decision rule for a confusing pair. Run the same model on the same development examples. Do not add labeled demonstrations yet.
 
 ### Required measurements
 
@@ -242,7 +273,7 @@ Learn when labeled examples help enough to justify a larger prompt.
 
 ### Task
 
-Compare zero-shot, one-shot, and few-shot prompts using examples selected only from `train.jsonl`. Keep the development rows, model, label definitions, and generation settings fixed. Document how you selected examples. Never use a development row as a demonstration.
+Compare zero-shot, one-shot, and few-shot prompts using examples selected only from the selected track's `train.jsonl`. Keep the development rows, model, label definitions, and generation settings fixed. Document how you selected examples. Never use a development row as a demonstration.
 
 Intermediate extension: compare two few-shot selection policies, such as random vs. label-balanced, or label-balanced vs. manually chosen boundary cases. Fix and record a random seed when sampling.
 
@@ -360,7 +391,7 @@ Find where additional context stops earning its cost.
 
 Evaluate at least three configurations, such as 0, 3, and 8 demonstrations. Keep everything else fixed. Estimate tokens using an SDK tokenizer, API usage metadata, or a clearly stated characters-to-tokens approximation. If your provider publishes prices, calculate estimated cost; otherwise report tokens and calls without inventing a price.
 
-Optional extension: choose demonstrations dynamically for each input using semantic similarity. An embeddings API is allowed but not required. Retrieve only from `train.jsonl`, exclude exact duplicates, and include embedding calls in cost and latency accounting.
+Optional extension: choose demonstrations dynamically for each input using semantic similarity. An embeddings API is allowed but not required. Retrieve only from the selected track's `train.jsonl`, exclude exact duplicates, and include embedding calls in cost and latency accounting.
 
 ### Required measurements
 
@@ -400,7 +431,7 @@ Choose a final system from evidence and test whether the improvement generalizes
 
 ### Task
 
-Freeze your baseline and final configurations before opening `data/final.jsonl`. Write down the expected outcome. Then run each configuration exactly once on all 32 final rows. Do not modify the system after seeing final labels. Save final-system predictions in the required submission format.
+Freeze your baseline and final configurations before opening the selected track's `final.jsonl`. Write down the expected outcome. Then run each configuration exactly once on every final row. Do not modify the system after seeing final labels. Save final-system predictions in the required submission format.
 
 ### Required measurements
 
@@ -488,10 +519,11 @@ Final accuracy alone does not determine the grade. A well-designed negative expe
 
 ## Brief instructor notes
 
-- The dataset is intentionally balanced, so accuracy is readable; macro-F1 still reveals uneven label behavior.
-- The central boundaries are cancellation vs. plan change, duplicate charge vs. refund status, and technical bug vs. feature request.
-- Encourage a fixed API budget before students start. Development runs are 32 calls each for a single-call pipeline.
+- Both datasets are intentionally balanced, so accuracy is readable; macro-F1 still reveals uneven label behavior.
+- Standard-track central boundaries are cancellation vs. plan change, duplicate charge vs. refund status, and technical bug vs. feature request. The challenge track additionally tests authentication vs. workspace authorization and confirmed charges vs. payment-method states.
+- Encourage a fixed API budget before students start. Development runs are 32 calls for standard and 30 for challenge in a single-call pipeline.
 - The required API path is Azure OpenAI Responses through the OpenAI Python SDK. Model deployments and structured-output support vary by Azure resource, so Module 6 intentionally includes fallback approaches.
+- GPT-5 nano is the recommended teaching model: it is capable enough for the task while leaving useful room for prompt, example-selection, and output-reliability experiments.
 - Do not reveal a preferred prompt. Ask learners to justify selection with logged evidence.
 - Audit that final predictions cover every final ID exactly once and contain only valid labels.
 - If API access is unavailable, an instructor may provide cached raw model responses; the learner should still implement parsing, evaluation, analysis, and comparison.
@@ -501,3 +533,4 @@ Final accuracy alone does not determine the grade. A well-designed negative expe
 - [Azure OpenAI Responses API (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses?pivots=programming-language-python)
 - [Azure OpenAI structured outputs (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/structured-outputs)
 - [Responses create method (official OpenAI API reference)](https://developers.openai.com/api/reference/python/resources/responses/methods/create)
+- [GPT-5 nano model (official OpenAI documentation)](https://developers.openai.com/api/docs/models/gpt-5-nano)

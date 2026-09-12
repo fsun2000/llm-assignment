@@ -94,6 +94,14 @@ Read plain-text output from `response.output_text`. In Module 6, use `client.res
 
 The Azure endpoint value should look like `https://YOUR-RESOURCE-NAME.openai.azure.com`; the supplied helper appends `/openai/v1/`. If your organization requires Microsoft Entra ID instead of an API key, ask your instructor to adapt only the authentication helper—the experiments do not otherwise change.
 
+### Recommended model: GPT-5 nano
+
+Use an Azure OpenAI deployment of **GPT-5 nano** as the default model for this assignment. It is a good fit because it is designed for focused tasks such as intent classification, is inexpensive enough for repeated evaluation runs, and supports both the Responses API and structured outputs.
+
+When creating the Azure deployment, give it a recognizable name such as `routelab-gpt-5-nano`. Put that **deployment name** in `AZURE_OPENAI_DEPLOYMENT`; your Azure deployment name does not have to equal the underlying `gpt-5-nano` model ID.
+
+If GPT-5 nano is unavailable in your Azure region or subscription, use another small text-generation model that supports the Responses API and record the exact deployment and underlying model. Keep the same deployment throughout Modules 1–7 so measured differences come from your experiments rather than a model change.
+
 For reproducible comparisons, keep the evaluation rows and model settings fixed unless the experiment explicitly changes them. Use low or zero sampling temperature if your API supports it. Save raw outputs as well as parsed labels when practical.
 
 ## Ground rules for experiments
@@ -492,6 +500,7 @@ Final accuracy alone does not determine the grade. A well-designed negative expe
 - The central boundaries are cancellation vs. plan change, duplicate charge vs. refund status, and technical bug vs. feature request.
 - Encourage a fixed API budget before students start. Development runs are 32 calls each for a single-call pipeline.
 - The required API path is Azure OpenAI Responses through the OpenAI Python SDK. Model deployments and structured-output support vary by Azure resource, so Module 6 intentionally includes fallback approaches.
+- GPT-5 nano is the recommended teaching model: it is capable enough for the task while leaving useful room for prompt, example-selection, and output-reliability experiments.
 - Do not reveal a preferred prompt. Ask learners to justify selection with logged evidence.
 - Audit that final predictions cover every final ID exactly once and contain only valid labels.
 - If API access is unavailable, an instructor may provide cached raw model responses; the learner should still implement parsing, evaluation, analysis, and comparison.
@@ -501,3 +510,4 @@ Final accuracy alone does not determine the grade. A well-designed negative expe
 - [Azure OpenAI Responses API (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/responses?pivots=programming-language-python)
 - [Azure OpenAI structured outputs (Microsoft Learn)](https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/structured-outputs)
 - [Responses create method (official OpenAI API reference)](https://developers.openai.com/api/reference/python/resources/responses/methods/create)
+- [GPT-5 nano model (official OpenAI documentation)](https://developers.openai.com/api/docs/models/gpt-5-nano)
